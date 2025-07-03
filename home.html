@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Agenda - Lista</title>
+</head>
+<body>
+  <div class="sidebar"></div>
+  <div class="main">
+    <header>
+      <h1 id="nome-lista">Todas as Tarefas</h1>
+      <span id="data-dia"></span>
+    </header>
+    <section class="tasks">
+      <ul></ul>
+      <a href="#" class="add-task" id="add-task-link">+ Adicionar tarefa</a>
+    </section>
+  </div>
+  
+  <!-- Modal de confirmação -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div id="modal-icon" class="modal-icon"></div>
+        <h3 id="modal-title" class="modal-title"></h3>
+      </div>
+      <div id="modal-message" class="modal-message"></div>
+      <div id="modal-buttons" class="modal-buttons"></div>
+    </div>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
