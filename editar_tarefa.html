@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Tarefa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar"></div>
+  <div class="main">
+    <header>
+      <h1>Editar Tarefa</h1>
+    </header>
+    <form id="edit-task-form" enctype="multipart/form-data">
+      <label for="task">Nome da Tarefa:</label>
+      <input type="text" id="task" name="task" required>
+      
+      <label for="descricao">Descrição:</label>
+      <textarea id="descricao" name="descricao" placeholder="Descrição detalhada da tarefa (opcional)"></textarea>
+      
+      <label for="list">Lista:</label>
+      <select id="list" name="list"></select>
+      
+      <label for="importancia">Importância:</label>
+      <select id="importancia" name="importancia">
+        <option value="1">🔵 Baixa</option>
+        <option value="2">🟡 Média</option>
+        <option value="3">🔴 Alta</option>
+      </select>
+      
+      <label for="date">Data de Vencimento:</label>
+      <input type="date" id="date" name="date">
+      
+      <div id="anexos-existentes"></div>
+      
+      <div class="anexos-upload">
+        <label for="anexos">Adicionar Novos Anexos:</label>
+        <input type="file" id="anexos" name="anexos" multiple accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.txt,.zip,.rar">
+        <small>Máximo 5 arquivos, 10MB cada. Tipos permitidos: imagens, PDF, documentos, texto, ZIP</small>
+      </div>
+      
+      <button type="submit">Salvar Alterações</button>
+    </form>
+  </div>
+  
+  <!-- Modal de confirmação -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div id="modal-icon" class="modal-icon"></div>
+        <h3 id="modal-title" class="modal-title"></h3>
+      </div>
+      <div id="modal-message" class="modal-message"></div>
+      <div id="modal-buttons" class="modal-buttons"></div>
+    </div>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
